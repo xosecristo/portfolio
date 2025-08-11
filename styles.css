@@ -1,0 +1,175 @@
+/*
+:root{
+	--close: URL(media/icons/mdi_close.svg);
+}
+*/
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Inter", sans-serif;	
+}
+
+body{
+	height: 100vh;
+	overflow: hidden;
+	background: #F5F5F5 url("media/patterns/whitespace_dot.png");
+	cursor: url("media/Cursor.svg"), auto;	
+}
+
+.figma-navbar{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	background-color: #E9E9E9;
+	border-bottom: 1px solid #D1D1D1;
+
+	& > span{
+		display: inherit;
+		align-items: inherit;
+		align-self: stretch;
+		
+		white-space: nowrap;
+		overflow:hidden;
+		text-overflow: ellipsis;
+
+		color: #747474;
+		
+		padding: 0.75rem;
+		gap: 0.5rem;
+		border-right: 1px solid #D1D1D1;
+
+		&.active {
+			background-color: white;
+			color: #212121;
+		}
+
+		&:hover {
+			transition: 0.1s;
+			background-color: white;
+			color: #212121;
+		}
+	}
+}
+
+
+
+main{
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 4.5rem;
+	gap: 2rem;
+	& h1{
+		font-size: 4rem;
+		color: #212121;
+		margin-bottom: 1rem;
+	}
+	& h2{
+		font-size: 1.5rem;
+		color: #616161;
+		font-weight: 500;
+		& span {
+			text-decoration: underline;
+		}
+	}
+	& .button-group{
+		display: inherit;
+		gap: 1rem;
+	}
+}
+
+.primary{
+	display: inherit;
+	padding: 1rem 1.75rem;
+	border-radius: 1rem;
+	font-size: 1.25rem;
+	color: #fff;
+	font-weight: 500;
+	gap:0.75rem;	
+	border: 1px solid #4C86F9;
+	background: radial-gradient(50% 98.89% at 50% 1.11%, #86BDF4 0%, #1D88F2 64.42%);
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+	transform: translate(0, -1px);
+}
+
+.primary:hover{
+	cursor:pointer;
+	box-shadow: none;
+	transform: none;
+}
+
+.primary:active{
+	background: radial-gradient(50% 98.89% at 50% 1.11%, #3E9AF6 3.37%, #1D88F2 40.38%);
+}
+
+.primary.icon{
+	padding-right: 2.15rem;
+}
+
+.secondary{
+	display: inherit;
+	padding: 1rem 1.75rem;
+	border-radius: 1rem;
+	font-size: 1.25rem;
+	border:1px solid #D1D1D1;
+	cursor: pointer;
+	color: black;
+	gap: 0.35rem;
+	text-decoration: none;
+	transition: 0.1s;
+	& span.link{
+	color: #1D88F2;
+	text-decoration: underline;
+	}
+}
+
+.secondary:hover{
+	border-color: #1D88F2;
+	transition: 0.1s;
+}
+
+.secondary:active{
+	border-color: #1D88F2;
+	& span.link:active{
+	color: #1D88F2;
+	}	
+}
+
+.postit{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 1rem;
+	margin: 2rem;
+	color:#616161;
+	width: 250px;
+	height: 250px;
+	background-color: #FFE299;
+	& .content{
+		height: 90%;
+	}
+ 	& .tag{
+ 		opacity: 0.5;
+  	}
+}
+
+footer{
+	padding: 0 4.5rem;
+	color: #616161;
+	& a{		
+		color: inherit;
+		text-decoration: none;
+	}
+	& a:visited{
+		color:inherit;
+	}
+	& span{		
+		text-decoration: underline;
+	}
+	& span:hover{
+		color: #212121;
+	}
+}
