@@ -22,6 +22,15 @@
 			track_pageview: true,
 			persistence: 'localStorage',
 		});
+		// Track page view
+		mixpanel.track('Page View', {
+			'Page Name': 'Portfolio 2025',
+			'Page URL': window.location.href,
+			'User Agent': navigator.userAgent,
+			'Screen Width': window.screen.width,
+			'Screen Height': window.screen.height,
+			'Referrer': document.referrer
+		});	
 	</script>
 </head>
 
