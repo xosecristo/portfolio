@@ -109,6 +109,7 @@ main {
 
 .primary:active {
 	background: radial-gradient(50% 98.89% at 50% 1.11%, #3E9AF6 3.37%, #1D88F2 40.38%);
+	scale: 0.98
 }
 
 .primary.icon {
@@ -117,6 +118,7 @@ main {
 
 .secondary {
 	display: inherit;
+	flex-wrap: wrap;
 	padding: 1rem 1.75rem;
 	border-radius: 1rem;
 	font-size: 1.25rem;
@@ -148,8 +150,17 @@ main {
 
 @media screen and (max-width: 768px) {
 
-	.postit,
-	.link {
+	main {
+		& h1 {
+			font-size: 3rem;
+		}
+
+		& h2 {
+			font-size: 1rem;
+		}
+	}
+
+	.postit {
 		display: none;
 	}
 
